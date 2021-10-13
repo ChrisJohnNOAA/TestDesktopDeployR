@@ -1,7 +1,10 @@
 # Windows default NetLogo installation path (adjust to your needs!):
 # netlogopath <- file.path(file.path(getwd(), "dist", "NetLogo 6.2.0"))
 # netlogopath <- file.path("C:/Users/Chris/Documents/TestDesktopDeployR/dist/NetLogo 6.2.0")
-basedir <- dirname(dirname(getwd()))
+
+#basedir <- dirname(dirname(getwd()))
+basedir <- getwd()
+
 netlogopath <- file.path(file.path(basedir, "dist", "NetLogo 6.2.0"))
 modelpath <- file.path(netlogopath, "app/models/Sample Models/Biology/Wolf Sheep Predation.nlogo")
 outpath <- file.path(getwd(), "out")

@@ -8,5 +8,12 @@
 jsonlite
 
 # if deploying shiny based applications:
-shiny
+#shiny
+digest
+methods
+memoise
+RGtk2
+cairoDevice
+gWidgets2
+gWidgets2RGtk2
 nlrx
