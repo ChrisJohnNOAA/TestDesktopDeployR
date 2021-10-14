@@ -2,16 +2,11 @@
 require(RGtk2) # required for gtkMain()
 require(gWidgets2)
 options(guiToolkit="RGtk2")
-#library(RGtk2)
-#library(gWidgets2)
-#library(gWidgets2RGtk2)
-print(getwd())
 source("app/nlrxsample.R")
 
 runApp = function() {
   resultsCache <<- NULL
   runModel = function(h, ...) {
-    print("run model called")
     resultsCache <<- get_nl_results()
     updatePlot(h)
   }
@@ -23,7 +18,6 @@ runApp = function() {
     }
     # generate bins based on input$bins from ui.R
     x <- resultsCache$`count sheep`
-    print(x)
     bins <- seq(min(x), max(x), length.out = as.numeric(svalue(binsSlider)) + 1)
     # draw the histogram with the specified number of bins
     hist(x, breaks = bins, col = 'darkgray', border = 'white')

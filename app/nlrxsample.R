@@ -1,11 +1,9 @@
-# Windows default NetLogo installation path (adjust to your needs!):
-# netlogopath <- file.path(file.path(getwd(), "dist", "NetLogo 6.2.0"))
-# netlogopath <- file.path("C:/Users/Chris/Documents/TestDesktopDeployR/dist/NetLogo 6.2.0")
-
+netlogopath <- file.path(file.path(basedir, "dist", "NetLogo 6.2.0"))
+# Because Shiny changes the working directory, this is needed if we're using Shiny
 #basedir <- dirname(dirname(getwd()))
 basedir <- getwd()
 
-netlogopath <- file.path(file.path(basedir, "dist", "NetLogo 6.2.0"))
+# Load NetLogo from our dist directory
 modelpath <- file.path(netlogopath, "app/models/Sample Models/Biology/Wolf Sheep Predation.nlogo")
 outpath <- file.path(getwd(), "out")
 # Unix default NetLogo installation path (adjust to your needs!):
@@ -13,14 +11,10 @@ outpath <- file.path(getwd(), "out")
 #modelpath <- file.path(netlogopath, "app/models/Sample Models/Biology/Wolf Sheep Predation.nlogo")
 #outpath <- file.path("/home/out")
 
-print(netlogopath)
-print(getwd())
 nl <- nlrx::nl(nlversion = "6.2.0",
                nlpath = netlogopath,
                modelpath = modelpath,
                jvmmem = 1024)
-
-
 
 # Attach results to nl object:
 #setsim(nl, "simoutput") <- results
@@ -62,7 +56,6 @@ get_nl_results <- function() {
 
   # Evaluate nl object:
   nlrx::eval_variables_constants(nl)
-  print(nl)
 
   # Run all simulations (loop over all siminputrows and simseeds)
   results <- nlrx::run_nl_all(nl)
