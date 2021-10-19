@@ -1,7 +1,8 @@
-netlogopath <- file.path(file.path(basedir, "dist", "NetLogo 6.2.0"))
+
 # Because Shiny changes the working directory, this is needed if we're using Shiny
 #basedir <- dirname(dirname(getwd()))
 basedir <- getwd()
+netlogopath <- file.path(file.path(basedir, "dist", "NetLogo 6.2.0"))
 
 # Load NetLogo from our dist directory
 modelpath <- file.path(netlogopath, "app/models/Sample Models/Biology/Wolf Sheep Predation.nlogo")
