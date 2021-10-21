@@ -1,3 +1,6 @@
+# Quick TestDesktopDeplyR Note
+This does have one external dependency that is not supplied as part of the github project, specifcally that java is available on the machine. You can install java from here: https://www.java.com/en/download/manual.jsp
+
 # DesktopDeployR
 A framework for deploying self-contained R-based applications to the desktop
 
