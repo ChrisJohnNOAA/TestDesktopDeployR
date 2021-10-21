@@ -1,6 +1,9 @@
 # Quick TestDesktopDeplyR Note
 This does have one external dependency that is not supplied as part of the github project, specifcally that java is available on the machine. You can install java from here: https://www.java.com/en/download/manual.jsp
 
+# Current Demo
+The current demo has a button to "Run NetLogo". When that is clicked the app then runs a NetLogo model in the background and after a short period (around 10 seconds though it depends on the speed of your computer) a histogram of some of the results from the NetLogo model is displayed. You can adjust the number of bins used for the historgram with the slider on the left.
+
 # DesktopDeployR
 A framework for deploying self-contained R-based applications to the desktop
 
